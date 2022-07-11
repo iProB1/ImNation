@@ -4,6 +4,6 @@ imgui animation, animated button, text, child...
 **i will release soon**
 
 # Credits
-- [Ocornut](https://github.com/Ocornut/imgui) **ImGui Owner**
+- [Ocornut](https://github.com/Ocornut) **ImGui**
 - [xo1337](https://github.com/xo1337) **Alpha animation, Childsize animation**
-- [pearless](https://github.com/pearless) **ImGui Tricks Owner**
+- [pearless](https://github.com/pearless) **ImGui Tricks**
