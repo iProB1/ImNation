@@ -1,6 +1,8 @@
 # ImNation
 **ImNation for you to make your menu looks better!**
 
+dont for get to star, fork for support
+
 **i will release soon**
 
 # Credits
