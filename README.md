@@ -1,9 +1,8 @@
 # ImNation
-[discord server](https://discord.gg/t4MvGyMSM3)
-
-**ImNation for you to make your menu looks better!**
-
-dont forget to star, fork for support
+- [discord server](https://discord.gg/t4MvGyMSM3) for suggest etc
+- i need fix errors then i will upload 
+- ImNation for you to make your menu looks better!
+- **dont forget to star, fork for support**
 
 # Credits
 - [Ocornut](https://github.com/Ocornut) **ImGui**
