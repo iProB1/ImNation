@@ -34,7 +34,7 @@ void ImNation::BoxProgressBar(const ImVec2& size_arg)
     bb.Expand(ImVec2(-style.FrameBorderSize, -style.FrameBorderSize));
     RenderRectFilledRangeH(window->DrawList, bb, GetColorU32(ImGuiCol_PlotHistogram), t0, t1, style.FrameRounding);
 }
-bool ImNation::LoadingBar(const char* label, float value,  const ImVec2& size_arg, const ImU32& bg_col, const ImU32& fg_col) {
+bool ImNation::LoadingBar(const char* label, float* value,  const ImVec2& size_arg, const ImU32& bg_col, const ImU32& fg_col) {
     ImGuiWindow* window = GetCurrentWindow();
         if (window->SkipItems)
             return false;
@@ -77,7 +77,7 @@ bool ImNation::LoadingBar(const char* label, float value,  const ImVec2& size_ar
         window->DrawList->AddCircleFilled(ImVec2(pos.x + circleEnd - o3, bb.Min.y + r), r, bg_col);
 }
 
-bool ImNation::LoadingCircle1(const char* label, float radius, int thickness, const ImU32& color) 
+bool ImNation::LoadingCircle1(const char* label, float* radius, int* thickness, const ImU32& color) 
 {
         ImGuiWindow* window = GetCurrentWindow();
         if (window->SkipItems)
@@ -115,7 +115,7 @@ bool ImNation::LoadingCircle1(const char* label, float radius, int thickness, co
 
         window->DrawList->PathStroke(color, false, thickness);
 }
-void ImNation::LoadingCircle(const ImVec4& fore_color, const ImVec4& back_color, float& arc_size, float& radius, float thickness)
+void ImNation::LoadingCircle(const ImVec4& fore_color, const ImVec4& back_color, float* arc_size, float* radius, float* thickness)
 {
 	auto front = ImGui::GetForegroundDrawList(); // also you can use GetWindowDrawList() or GetBackgroundDrawList()
     ImVec2 center = ImGui::GetIO().DisplaySize / 2.f;
@@ -137,7 +137,7 @@ void ImNation::LoadingCircle(const ImVec4& fore_color, const ImVec4& back_color,
     if (position >= IM_PI * 1.90f)
         position = 0.f;
 }
-void ImNation::ChildSizex(float& ChildSizex, float& ChildSizex2, int tosize, float& Speed){
+void ImNation::ChildSizex(float* ChildSizex, float* ChildSizex2, int* tosize, float* Speed){
 	if (ImGui::IsItemHovered())
 	{
 	    if (!(ChildSizex >= ChildSizex + tosize)){
@@ -150,7 +150,7 @@ void ImNation::ChildSizex(float& ChildSizex, float& ChildSizex2, int tosize, flo
 		    ChildSizex2 += Speed;
 	}
 }
-void ImNation::ChildSizey(float& ChildSizey, float& ChildSizey2, int tosize, float& Speed){
+void ImNation::ChildSizey(float* ChildSizey, float* ChildSizey2, int* tosize, float* Speed){
 	if (ImGui::IsItemHovered())
 	{
 	    if (!(ChildSizey >= ChildSizey + tosize)){
@@ -163,7 +163,7 @@ void ImNation::ChildSizey(float& ChildSizey, float& ChildSizey2, int tosize, flo
 		    ChildSizey2 += Speed;
 	}
 }
-void ImNation::ChildSizex(float& ChildSizex, int tosize, float& Speed){
+void ImNation::ChildSizex(float* ChildSizex, int* tosize, float* Speed){
 	if (ImGui::IsItemHovered())
 	{
 		if (!(ChildSizex >= ChildSizex + tosize))
@@ -173,7 +173,7 @@ void ImNation::ChildSizex(float& ChildSizex, int tosize, float& Speed){
 			ChildSizex -= Speed;
 	}
 }
-void ImNation::ChildSizey(float& ChildSizey, int tosize, float& Speed){
+void ImNation::ChildSizey(float* ChildSizey, int* tosize, float* Speed){
 	if (ImGui::IsItemHovered())
 	{
 		if (!(ChildSizey >= ChildSizey + tosize))
@@ -183,7 +183,7 @@ void ImNation::ChildSizey(float& ChildSizey, int tosize, float& Speed){
 			ChildSizey -= Speed;
 	}
 }
-void ImNation::TextColored(int R, int G, int B, const char* label, float& Alpha, bool tick, float& MaxValue, float& Speed, ...)
+void ImNation::TextColored(int* R, int* G, int* B, const char* label, float* Alpha, bool* tick, float* MaxValue, float* Speed, ...)
 {
 	if (tick || Alpha >= MaxValue)
 	{
