@@ -23,6 +23,6 @@ namespace ImNation {
 	void ChildSizey(float* ChildSizey, float* ChildSizey2, int* tosize = 20, float* Speed = 1);
 	void ChildSizex(float* ChildSizex, int* tosize = 20, float* Speed = 1);
 	void ChildSizey(float* ChildSizey, int* tosize = 20, float* Speed = 1);
-	void TextColored(int R, int G, int B, const char* label, float* Alpha = 255, bool* tick = false, float* MaxValue = 255, float* Speed = 1.0f, ...);
+	void TextColored(int* R, int* G, int* B, const char* label, float* Alpha = 255, bool* tick = false, float* MaxValue = 255, float* Speed = 1.0f, ...);
     bool Button(const char* label, const ImVec2& size = ImVec2(0, 0));
 }
