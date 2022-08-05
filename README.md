@@ -2,6 +2,7 @@
 - [discord server](https://discord.gg/t4MvGyMSM3) for suggest etc
 - ImNation for you to make your menu looks better!
 - **dont forget to star, fork for support**
+- i will delete src and redo later
 
 # Info
 - not complicated like others, clean code 
